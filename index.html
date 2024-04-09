@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>视频播放</title>
+</head>
+<body>
+    <video width="640" height="480" controls>
+        <source src="" type="video/mp4">
+        您的浏览器不支持 video 标签。
+    </video>
+
+    <script>
+        function getVideoURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('video'); // 假设 URL 中参数名为 'video'
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoElement = document.querySelector('video source');
+            videoElement.src = getVideoURL();
+            document.querySelector('video').load();
+        });
+    </script>
+</body>
+</html>
