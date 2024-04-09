@@ -5,23 +5,9 @@
     <title>视频播放</title>
 </head>
 <body>
-    <video width="640" height="480" controls id="videoPlayer">
+    <video width="640" height="480" controls src="https://dl-a10b-0858.mypikpak.com/download/?fid=D5cdhjGt2SyJOAUIgZ-2FHWG2nFCRDu_xiekoRzStClzQ3peCNJIb4QWTpbgGNbew96oByX8eJuc2EeziyBi-2DoZzT-vUu_tJ2oJhKlEDU=&from=5&verno=3&prod=xdrive&expire=1712786259&g=B3927393085E83C8C4CFC62DE8DEADEB48FD1F0C&ui=ZaL4FqNi_MIVitK4&t=0&ms=10400000&th=10400000&f=4911099718&alt=0&userid=ZaL4FqNi_MIVitK4&fileid=VNu0srIY-556rQsGgKGUZX3Yo1&pr=XQPkPvr9WWiIuMvELmrVepznRKgD5NWRvYIetUruslzRcGHVl6YHR1d_-ung_75CsGmxQg4pei4wLw2lWWf8pV-C-AFK_8wzHaT-TIStvyP6Yi2EjOaBSFyyqNDFZ-4shYt1WkftRlQqrGhPmEiYCDWxJZajc8t-yegxCOgIZtAGyV92EeGV2lV7Gsa0nMl2gEr4Icv-3Svq6yks3E4spnhhxuCM6iG8oUZtWQ-zOJkqY5uPjiM_i0zfaSb1bS8hsB3GiSDSP9IlSJ_Va5BlXMsmZNdcl6Tn7hDpYEbGK5GeQIArNcM16h4614qo5XTjd32FZQgOFIzgT2kQwfsOAs-VXA_rZ9daxahcwBHf3Ft6D2-sCXdVLO5WBqfwkZBy&sign=CE15750BACF91FA6F953F79E00E8C1E7">
         您的浏览器不支持 video 标签。
     </video>
-
-    <script>
-        function getVideoURL() {
-            const params = new URLSearchParams(window.location.search);
-            return params.get('video'); // 假设 URL 中参数名为 'video'
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const videoURL = getVideoURL();
-            const videoElement = document.getElementById('videoPlayer');
-            videoElement.src = videoURL;
-            videoElement.load();
-        });
-    </script>
 </body>
 </html>
 
