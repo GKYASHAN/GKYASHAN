@@ -5,8 +5,7 @@
     <title>视频播放</title>
 </head>
 <body>
-    <video width="640" height="480" controls>
-        <source src="" type="video/mp4">
+    <video width="640" height="480" controls id="videoPlayer">
         您的浏览器不支持 video 标签。
     </video>
 
@@ -17,10 +16,12 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            const videoElement = document.querySelector('video source');
-            videoElement.src = getVideoURL();
-            document.querySelector('video').load();
+            const videoURL = getVideoURL();
+            const videoElement = document.getElementById('videoPlayer');
+            videoElement.src = videoURL;
+            videoElement.load();
         });
     </script>
 </body>
 </html>
+
